@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pollution Monitoring Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js for graphs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌍 Pollution Monitoring Dashboard</h1>
+            <p>Real-time environmental data and alerts.</p>
+        </header>
+
+        <main>
+            <!-- Alerts Section -->
+            <section class="alerts-section">
+                <h2>⚠️ Active Alerts</h2>
+                <div id="alerts-container" class="alerts-container">
+                    <!-- Alerts will be injected here -->
+                    <p>Loading alerts...</p>
+                </div>
+            </section>
+
+            <!-- Chart Section -->
+            <section class="chart-section">
+                <h2>📈 Pollution Trends (Recent Readings)</h2>
+                <div class="chart-container">
+                    <canvas id="pollutionChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Data Table Section -->
+            <section class="data-section">
+                <div class="table-header">
+                    <h2>📊 Sensor Readings</h2>
+                    <button id="refresh-btn">Refresh Data</button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Location</th>
+                                <th>Pollutant</th>
+                                <th>Value</th>
+                                <th>Unit</th>
+                            </tr>
+                        </thead>
+                        <tbody id="readings-table-body">
+                            <!-- Data will be injected here -->
+                            <tr><td colspan="5">Loading data...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
